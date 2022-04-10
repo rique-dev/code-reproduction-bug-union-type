@@ -1,4 +1,4 @@
-type MyKeys = 'margin' | 'padding';
+type MyKeys = 'display';
 type Responsive<T> = {
   sm: T;
   md: T;

@@ -8,7 +8,7 @@ import { Token } from './MyComplexTy';
   shadow: true,
 })
 export class MyComponent {
-  @Prop() margin: Token<'margin'>;
+  @Prop() display: Token<'display'>;
 
   /**
    * The first name
@@ -30,6 +30,15 @@ export class MyComponent {
   }
 
   render() {
-    return <div>Hello, World! I'm {this.getText()}</div>;
+    console.log(this.display)
+    return (
+      <div
+        style={{
+          display: this.display as unknown as string,
+        }}
+      >
+        Hello, World! I'm {this.getText()}
+      </div>
+    );
   }
 }

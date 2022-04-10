@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Token } from "./components/my-component/MyComplexTy";
 export namespace Components {
     interface MyComponent {
+        "display": Token<'display'>;
         /**
           * The first name
          */
@@ -16,7 +17,6 @@ export namespace Components {
           * The last name
          */
         "last": string;
-        "margin": Token<'margin'>;
         /**
           * The middle name
          */
@@ -36,6 +36,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyComponent {
+        "display"?: Token<'display'>;
         /**
           * The first name
          */
@@ -44,7 +45,6 @@ declare namespace LocalJSX {
           * The last name
          */
         "last"?: string;
-        "margin"?: Token<'margin'>;
         /**
           * The middle name
          */
